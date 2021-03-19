@@ -1,9 +1,16 @@
 {
-	"name": "video-interesting",
-	"version": "1.0.0",
-	"description": "Video Interesting",
-	"main": "hello-world.js",
-	"assets": [
-		"favicon.ico"
-		]
+  "name": "tiktok-crawler-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello-world.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "mongodb": "^3.6.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
