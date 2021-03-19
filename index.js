@@ -31,7 +31,7 @@ server.listen(process.env.PORT || 5000, hostname, () => {
     if (err) console.log(err);
     const videos = Database.getDB().collection('videos')
     setInterval(() => {
-      axios.get('https://t.tiktok.com/api/recommend/item_list/?aid=1988&region=VN&count=1')
+      axios.get('https://t.tiktok.com/api/recommend/item_list/?aid=1988&region=VN&count=10')
       .then(({data}) => {
         Promise.all(
           data.itemList.map(e => exist(e))
