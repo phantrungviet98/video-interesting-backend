@@ -20,6 +20,10 @@ const exist = (e) => {
       if (suc) {
         res(null)
       } else {
+        delete e.author
+        delete e.challenges
+        delete e.duetInfo
+        delete e.authorStats
         res(e)
       }
     })
