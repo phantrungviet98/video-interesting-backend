@@ -3,7 +3,6 @@ const axios = require('axios');
 const Database = require('./database');
 
 const hostname = '127.0.0.1';
-const port = 3000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
@@ -27,8 +26,7 @@ const exist = (e) => {
   })
 }
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(process.env.PORT || 5000, hostname, () => {
   Database.connect((err, client) => {
     if (err) console.log(err);
     const videos = Database.getDB().collection('videos')
