@@ -31,6 +31,9 @@ const exist = (e) => {
 }
 
 server.listen(process.env.PORT || 5000, hostname, () => {
+  setInterval(() => {
+    axios.get('https://video-interesting.herokuapp.com/')
+  }, 5*60000)
   Database.connect((err, client) => {
     if (err) console.log(err);
     const videos = Database.getDB().collection('videos')
